@@ -3,9 +3,12 @@ Project to practice learnings from Automation University Course for Selenium wit
 
 Link to the course: https://testautomationu.applitools.com/selenium-webdriver-tutorial-java
 
-Key points : \n
-Page Object Model Pattern  \n
-Locators and Web Elements  \n
-Chrome Web driver  \n
+Key points : 
+Page Object Model Pattern    
+
+Locators and Web Elements   
+
+Chrome Web driver    
+
 TestingNg library for Unit Testing purpose.
 
