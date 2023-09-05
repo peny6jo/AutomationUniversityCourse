@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 public class HomePage {
 
      private WebDriver driver;
-     private By formAuthenticatorLink = By.linkText("Form Authentication");
-
      public HomePage(WebDriver driver){
 
          this.driver = driver;
@@ -16,8 +14,17 @@ public class HomePage {
 
      public LoginPage clickFormAuthenticatorLink(){
 
-         driver.findElement(formAuthenticatorLink).click();
+         clickLink("Form Authentication");
          return new LoginPage(driver);
+     }
+     public DropDownPage clickDropDownLink(){
+         clickLink("Dropdown");
+         return new DropDownPage(driver);
+     }
+
+     private void clickLink( String linkName){
+         driver.findElement(By.linkText(linkName)).click();
+
      }
 
 
