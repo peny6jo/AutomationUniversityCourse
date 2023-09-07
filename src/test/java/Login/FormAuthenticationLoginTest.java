@@ -1,10 +1,12 @@
-package Base;
+package Login;
 import static  org.testng.Assert.*;
+
+import Base.BaseTest;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.SecureAreaPage;
 import org.testng.Assert.*;
-public class FormAuthenticationLoginTest extends BaseTest{
+public class FormAuthenticationLoginTest extends BaseTest {
 
    @Test
    public void testLogin(){

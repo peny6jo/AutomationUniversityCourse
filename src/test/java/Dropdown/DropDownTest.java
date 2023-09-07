@@ -1,5 +1,6 @@
-package Base;
+package Dropdown;
 
+import Base.BaseTest;
 import org.testng.Assert.*;
 import org.testng.annotations.Test;
 import pages.DropDownPage;
@@ -9,7 +10,7 @@ import java.util.List;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-public class DropDownTest extends BaseTest{
+public class DropDownTest extends BaseTest {
 
     @Test
     public void testOptionSelection(){

@@ -10,12 +10,18 @@ public class ForgotPasswordPage {
     private By emailField = By.id("email");
     private By submitButton = By.id("form_submit"); //"#forgot_password button"
 
+    public ForgotPasswordPage(WebDriver driver){
+        this.driver =  driver;
+    }
+
     public void setEmailField(String email){
         driver.findElement(emailField).sendKeys(email);
 
     }
-    public void clickSubmitButton(){
+    public EmailSentPage clickSubmitButton(){
         driver.findElement(submitButton).click();
+        return new EmailSentPage(driver);
+
     }
 
 }

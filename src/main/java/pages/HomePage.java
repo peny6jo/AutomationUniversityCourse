@@ -22,9 +22,13 @@ public class HomePage {
          return new DropDownPage(driver);
      }
 
-     public ForgotPasswordPage clickForgotPassword(){
+     public ForgotPasswordPage clickForgotPasswordLink(){
          clickLink("Forgot Password");
-         return new ForgotPasswordPage();
+         return new ForgotPasswordPage(driver);
+     }
+     public HoverPage clickHoversLink(){
+         clickLink("Hovers");
+         return new HoverPage(driver);
      }
 
      private void clickLink( String linkName){
