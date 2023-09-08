@@ -13,10 +13,15 @@ public class KeyPressesPage {
     public KeyPressesPage(WebDriver driver) {
         this.driver  = driver;
     }
-    public void pressKey(Keys key){
+    public void pressKey(String key){
         driver.findElement(input).sendKeys(key);
 
     }
+    public void pressAt(){
+        driver.findElement(input).sendKeys(Keys.chord(Keys.ALT,"6","4"));
+
+    }
+
 
     public String retrieveResult(){
         return driver.findElement(result).getText();
