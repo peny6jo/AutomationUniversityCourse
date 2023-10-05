@@ -44,6 +44,7 @@ public class AlertsTest extends BaseTest {
         String text= "Hello";
         alertPage.ClickPromptButton();
         alertPage.TypePrompt(text);
+        alertPage.AcceptAlert();
         String result = alertPage.GetResult();
         assertEquals(result,"You entered: Hello", "Result doesn't match");
 
