@@ -21,7 +21,6 @@ public class HomePage {
          clickLink("Dropdown");
          return new DropDownPage(driver);
      }
-
      public ForgotPasswordPage clickForgotPasswordLink(){
          clickLink("Forgot Password");
          return new ForgotPasswordPage(driver);
@@ -30,7 +29,6 @@ public class HomePage {
          clickLink("Hovers");
          return new HoverPage(driver);
      }
-
      public KeyPressesPage clickKeyPressesLink(){
          clickLink("Key Presses");
          return new KeyPressesPage(driver);
@@ -41,16 +39,18 @@ public class HomePage {
          return new HorizontalSlidePage(driver);
 
      }
-    public AlertPage clickAlertLink(){
+     public AlertPage clickAlertLink(){
         clickLink("JavaScript Alerts");
         return new AlertPage(driver);
     }
-
-    public FileUploaderPage clickFileUploadLink(){
+     public FileUploaderPage clickFileUploadLink(){
          clickLink("File Upload");
          return new FileUploaderPage(driver);
-    }
-
+     }
+     public ContextMenuPage clickContextMenuLink(){
+         clickLink("Context Menu");
+         return new ContextMenuPage(driver);
+     }
      private void clickLink( String linkName){
          driver.findElement(By.linkText(linkName)).click();
 
