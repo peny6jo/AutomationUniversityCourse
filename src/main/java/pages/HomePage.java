@@ -41,9 +41,14 @@ public class HomePage {
          return new HorizontalSlidePage(driver);
 
      }
-    public AlertPage clickAlert(){
+    public AlertPage clickAlertLink(){
         clickLink("JavaScript Alerts");
         return new AlertPage(driver);
+    }
+
+    public FileUploaderPage clickFileUploadLink(){
+         clickLink("File Upload");
+         return new FileUploaderPage(driver);
     }
 
      private void clickLink( String linkName){

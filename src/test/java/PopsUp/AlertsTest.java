@@ -2,7 +2,6 @@ package PopsUp;
 
 import Base.BaseTest;
 import org.testng.annotations.Test;
-import pages.AlertPage;
 
 import static org.testng.Assert.assertEquals;
 public class AlertsTest extends BaseTest {
@@ -11,7 +10,7 @@ public class AlertsTest extends BaseTest {
 
     @Test
     public void TestAlertSuccessfullyClick(){
-        var alertPage = homePage.clickAlert();
+        var alertPage = homePage.clickAlertLink();
         alertPage.ClickAlertButton();
         alertPage.AcceptAlert();
         String result = alertPage.GetResult();
@@ -20,7 +19,7 @@ public class AlertsTest extends BaseTest {
     }
     @Test
     public void TestConfirmAlert(){
-        var alertPage = homePage.clickAlert();
+        var alertPage = homePage.clickAlertLink();
         alertPage.ClickJSConfirmButton();
         alertPage.AcceptAlert();
         String result = alertPage.GetResult();
@@ -30,7 +29,7 @@ public class AlertsTest extends BaseTest {
 
     @Test
     public void TestDismissAlert(){
-        var alertPage = homePage.clickAlert();
+        var alertPage = homePage.clickAlertLink();
         alertPage.ClickJSConfirmButton();
         alertPage.DismissAlert();
         String result = alertPage.GetResult();
@@ -40,7 +39,7 @@ public class AlertsTest extends BaseTest {
 
     @Test
     public void TestPrompt(){
-        var alertPage = homePage.clickAlert();
+        var alertPage = homePage.clickAlertLink();
         String text= "Hello";
         alertPage.ClickPromptButton();
         alertPage.TypePrompt(text);
