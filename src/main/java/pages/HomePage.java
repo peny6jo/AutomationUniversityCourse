@@ -51,6 +51,10 @@ public class HomePage {
          clickLink("Context Menu");
          return new ContextMenuPage(driver);
      }
+     public WYSIWYGEditorPage clickWYSIWYGLink(){
+         clickLink("WYSIWYG Editor");
+         return new WYSIWYGEditorPage(driver);
+     }
      private void clickLink( String linkName){
          driver.findElement(By.linkText(linkName)).click();
 
